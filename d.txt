@@ -1,0 +1,162 @@
+gembank-marketing/
+│
+├── frontend/                          # React + Vite
+│   ├── public/
+│   │   ├── favicon.ico
+│   │   ├── og-image.png
+│   │   └── robots.txt
+│   │
+│   ├── src/
+│   │   ├── assets/
+│   │   │   ├── images/
+│   │   │   │   ├── logo.svg
+│   │   │   │   ├── hero-mockup.png
+│   │   │   │   └── feature-icons/
+│   │   │   └── fonts/
+│   │   │
+│   │   ├── components/
+│   │   │   ├── common/
+│   │   │   │   ├── Navbar.jsx
+│   │   │   │   ├──  
+│   │   │   │   ├──  
+│   │   │   │   ├── 
+│   │   │   │   ├── Modal.jsx
+│   │   │   │   ├── 
+│   │   │   │   └── ChatWidget.jsx
+│   │   │   │
+│   │   │   ├── home/
+│   │   │   │   ├── HeroSection.jsx
+│   │   │   │   ├── 
+│   │   │   │   ├── 
+│   │   │   │   ├── 
+│   │   │   │   └── CTASection.jsx
+│   │   │   │
+│   │   │   ├── features
+│   │   │   │   ├──  
+│   │   │   │   ├── 
+│   │   │   │   ├──  
+│   │   │   │   └──  
+│   │   │   │
+│   │   │   ├── auth/
+│   │   │   │   ├── LoginForm.jsx
+│   │   │   │   ├── SignupForm.jsx
+│   │   │   │   ├── BusinessProfileForm.jsx
+│   │   │   │   └── OnboardingWizard.jsx
+│   │   │   │
+│   │   │   └── loi/
+│   │   │       ├── LOIForm.jsx
+│   │   │       ├──  
+│   │   │       ├── 
+│   │   │       └── SuccessScreen.jsx
+│   │   │
+│   │   ├── pages/
+│   │   │   ├──  
+│   │   │   ├──  
+│   │   │   ├── 
+│   │   │   └── LOIPage.jsx
+│   │   │
+│   │   ├── context/
+│   │   │   ├── AuthContext.jsx
+│   │   │   ├── LOIFormContext.jsx
+│   │   │   └── ThemeContext.jsx
+│   │   │
+│   │   ├── hooks/
+│   │   │   ├── useAuth.js
+│   │   │   ├── useForm.js
+│   │   │   └── useAnalytics.js
+│   │   │
+│   │   ├── services/
+│   │   │   ├── api.js
+│   │   │   ├── auth.service.js
+│   │   │   ├── loi.service.js
+│   │   │   └── analytics.service.js
+│   │   │
+│   │   ├── utils/
+│   │   │   ├── validators.js
+│   │   │   ├── constants.js
+│   │   │   └── helpers.js
+│   │   │
+│   │   ├── styles/
+│   │   │   └── globals.css
+│   │   │
+│   │   ├──  
+│   │   ├── main.jsx
+│   │   └── router.jsx
+│   │
+│   ├── .env.example
+│   ├── .eslintrc.cjs
+│   ├── index.html
+│   ├── package.json
+│   ├──  
+│    
+│   └── vite.config.js
+│ 
+│   ├── .env.example
+│   ├── .gitignore
+│   ├── package.json
+│   └── server.js
+│
+├── .gitignore
+└── README.md
+
+formstepper.js from Loi
+
+│
+├── backend/                           # Node.js + Express
+│   ├── src/
+│   │   ├── config/
+│   │   │   ├── db.js
+│   │   │   ├── email.js
+│   │   │   ├── jwt.js
+│   │   │   └── constants.js
+│   │   │
+│   │   ├── models/
+│   │   │   ├── User.model.js
+│   │   │   ├── BusinessProfile.model.js
+│   │   │   ├── LOI.model.js
+│   │   │   └── Subscription.model.js
+│   │   │
+│   │   ├── controllers/
+│   │   │   ├── auth.controller.js
+│   │   │   ├── business.controller.js
+│   │   │   ├── loi.controller.js
+│   │   │   └── subscription.controller.js
+│   │   │
+│   │   ├── routes/
+│   │   │   ├── auth.routes.js
+│   │   │   ├── business.routes.js
+│   │   │   ├── loi.routes.js
+│   │   │   └── subscription.routes.js
+│   │   │
+│   │   ├── middleware/
+│   │   │   ├── auth.middleware.js
+│   │   │   ├── validation.middleware.js
+│   │   │   ├── rateLimiter.middleware.js
+│   │   │   └── errorHandler.middleware.js
+│   │   │
+│   │   ├── services/
+│   │   │   ├── email.service.js
+│   │   │   ├── pdf.service.js
+│   │   │   ├── encryption.service.js
+│   │   │   └── sms.service.js
+│   │   │
+│   │   ├── utils/
+│   │   │   ├── validators.js
+│   │   │   ├── logger.js
+│   │   │   └── helpers.js
+│   │   │
+│   │   ├── templates/
+│   │   │   ├── loi-pdf.html
+│   │   │   └── email-templates/
+│   │   │       ├── welcome.html
+│   │   │       └── loi-confirmation.html
+│   │   │
+│   │   └── app.js
+│   │
+│   ├── .env.example
+│   ├── .gitignore
+│   ├── package.json
+│   └── server.js
+│
+├── .gitignore
+└── README.md
