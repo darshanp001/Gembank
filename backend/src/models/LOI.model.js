@@ -34,6 +34,7 @@ const loiSchema = new mongoose.Schema({
 
   // --- Server-generated fields ---
   loiReference: { type: String, required: true, unique: true },
+  certificateId: { type: String, required: true, unique: true },
   status: { type: String, default: 'pending' }, // e.g., pending, reviewing, approved
 }, {
   timestamps: true, // Automatically adds createdAt and updatedAt fields

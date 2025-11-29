@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Building2, BarChart3, ShieldCheck, UploadCloud, XCircle, Mail, CheckCircle, FileText } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
 import { submitLOI } from '../../services/loi.service';
@@ -18,31 +18,50 @@ const LOIForm = () => {
   const [filePreviewUrl, setFilePreviewUrl] = useState(null);
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef(null);
   const [errors, setErrors] = useState({});
   
   const [formData, setFormData] = useState({
-    ownerName: '',
-    storeName: '',
-    businessType: '',
-    gstin: '',
-    pan: '',
-    storeAddress: '',
-    cityMarketArea: '',
-    state: '',
-    email: '',
-    phone: '',
-    alternatePhone: '',
-    inventoryManagement: '',
-    complianceIssues: '',
-    loanDifficulty: '',
-    wantsInstantLoans: '',
-    digitalPaymentsFrequency: '',
-    joinPilot: '',
-    signatureFullName: '',
-    signatureConfirmation: false,
-    verificationFile: null, // This will store either File object or Base64 string
-    verificationFileName: null, // To store the original file name
-    verificationFileType: null, // To store the original file type
+    ownerName: 'Demo Owner',
+    storeName: 'Demo Store',
+    businessType: 'Retail',
+    gstin: '27AABAA1471A1Z1',
+    pan: 'ABCDE1234F',
+    storeAddress: '123 Demo Street',
+    cityMarketArea: 'Demo City',
+    state: 'Maharashtra',
+    email: 'demo@example.com',
+    phone: '9876543210',
+    alternatePhone: '9876543211',
+    inventoryManagement: 'Excel',
+    complianceIssues: 'No',
+    loanDifficulty: 'Easy',
+    wantsInstantLoans: 'Yes',
+    digitalPaymentsFrequency: 'Daily',
+    joinPilot: 'Yes',
+    signatureFullName: 'Demo Signature',
+    // ownerName: '',
+    // storeName: '',
+    // businessType: '',
+    // gstin: '',
+    // pan: '',
+    // storeAddress: '',
+    // cityMarketArea: '',
+    // state: '',
+    // email: '',
+    // phone: '',
+    // alternatePhone: '',
+    // inventoryManagement: '',
+    // complianceIssues: '',
+    // loanDifficulty: '',
+    // wantsInstantLoans: '',
+    // digitalPaymentsFrequency: '',
+    // joinPilot: '',
+    // signatureFullName: '',
+    // signatureConfirmation: false,
+    // verificationFile: null, // This will store either File object or Base64 string
+    // verificationFileName: null, // To store the original file name
+    // verificationFileType: null, // To store the original file type
   });
 
   const steps = [
@@ -184,6 +203,7 @@ const LOIForm = () => {
       case 2:
         if (!formData.signatureFullName?.trim()) newErrors.signatureFullName = 'Full name is required for signature.';
         if (!formData.signatureConfirmation) newErrors.signatureConfirmation = 'Please confirm your signature.';
+        if (!formData.verificationFile) newErrors.verificationFile = 'A verification document is required.';
         break;
         
       default:
@@ -197,13 +217,17 @@ const LOIForm = () => {
   const handleNext = () => {
     if (validateStep(currentStep)) {
       setCurrentStep(prev => Math.min(prev + 1, steps.length - 1));
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (formRef.current) {
+        formRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
   const handlePrevious = () => {
     setCurrentStep(prev => Math.max(prev - 1, 0));
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -576,7 +600,7 @@ const LOIForm = () => {
               <h3 className="text-lg font-semibold text-gembank-charcoal mb-4">F) Verification Upload</h3>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Upload any one: Shop Stamp Photo, Visiting Card, Store Photo, or Registration Certificate.
+                  Upload any one: Shop Stamp Photo, Visiting Card, Store Photo, or Registration Certificate. <span className="text-red-500">*</span>
                 </label>
                 {!formData.verificationFile ? (
                   <div className="mt-2 flex justify-center px-6 pt-5 pb-6 border-2 border-gembank-gray-300 border-dashed rounded-md hover:border-gembank-gold transition-colors">
@@ -658,7 +682,7 @@ const LOIForm = () => {
         <ProgressBar currentStep={currentStep} totalSteps={steps.length} />
 
         {/* Stepper */}
-        <FormStepper steps={steps} currentStep={currentStep} />
+        <div ref={formRef} className="mt-4"><FormStepper steps={steps} currentStep={currentStep} /></div>
 
         {/* Form Content */}
         <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-card p-8 mb-6">

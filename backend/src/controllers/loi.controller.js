@@ -4,6 +4,14 @@ const { sendLOIEmail } = require('../services/email.service');
 const { encrypt } = require('../services/encryption.service');
 
 /**
+ * Generates a random numeric string of a given length.
+ * @param {number} length The desired length of the numeric string.
+ * @returns {string} A random number as a string.
+ */
+const generateNumericId = (length) => {
+  return Math.floor(Math.pow(10, length - 1) + Math.random() * (Math.pow(10, length) - Math.pow(10, length - 1) - 1)).toString();
+};
+/**
  * Submit Letter of Interest
  * @route POST /api/loi/submit
  * @access Public (with rate limiting)
@@ -27,11 +35,14 @@ exports.submitLOI = async (req, res) => {
 
     // Generate unique LOI reference number
     const loiReference = `LOI-${Date.now()}-${Math.random().toString(36).substr(2, 9).toUpperCase()}`;
+    // Generate unique Certificate ID
+    const certificateId = `GEM-EP-${generateNumericId(7)}`;
 
     // Prepare the data for saving
     const dataToSave = {
       ...formData,
       loiReference,
+      certificateId,
       companyLogo: formData.companyLogo || null, // Explicitly include the company logo
     };
 
@@ -46,7 +57,7 @@ exports.submitLOI = async (req, res) => {
 
     // Generate and save the PDF document
     const pdfBuffer = await generateLOIPDF(savedLoi);
-    const pdfUrl = await savePDF(pdfBuffer, savedLoi.loiReference); // Correctly await the async function
+    const pdfUrl = await savePDF(pdfBuffer, savedLoi.certificateId); // Correctly await the async function
 
     // Update the LOI document with the path to the generated PDF
     savedLoi.loiDocumentUrl = pdfUrl;
@@ -55,13 +66,17 @@ exports.submitLOI = async (req, res) => {
     // Confirmation email sending is disabled for now
     // await sendLOIEmail(savedLoi.email, savedLoi, pdfUrl);
 
+    // Construct the full, absolute URL for the PDF
+    const fullPdfUrl = `${req.protocol}://${req.get('host')}${pdfUrl}`;
+
     res.status(201).json({
       success: true,
       message: 'LOI submitted successfully',
       data: {
         loiReference: savedLoi.loiReference,
+        certificateId: savedLoi.certificateId,
         submittedAt: savedLoi.createdAt,
-        pdfUrl: pdfUrl, // Send the public URL of the PDF to the frontend
+        pdfUrl: fullPdfUrl, // Send the absolute URL to the frontend
       }
     });
 
