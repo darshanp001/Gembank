@@ -24,7 +24,7 @@
     "morgan": "^1.10.0",
     "multer": "^2.0.2",
     "pdfkit": "^0.17.2",
-    "puppeteer": "^21.6.1"
+    "puppeteer-core": "^21.6.1"
   },
   "devDependencies": {
     "jest": "^29.7.0",
