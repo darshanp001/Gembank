@@ -52,7 +52,7 @@ const HeroSection = () => {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-5xl font-display font-bold leading-[1.15] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-5xl font-serif  leading-[1.15] tracking-tight" style={{ fontFamily: "'Wulkan Display', serif" }}>
               <span className="text-[#1A1A1A]">
                 Financial Infrastructure for
               </span>

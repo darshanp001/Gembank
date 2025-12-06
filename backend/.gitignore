@@ -1,8 +1,12 @@
 # Dependencies
 node_modules
 
-# Environment variables
+# Environment variable files
+# Ignore all .env files...
 .env
+.env.*
+# ...except for the example template
+!.env.example
 
 # Uploaded files
 uploads/
