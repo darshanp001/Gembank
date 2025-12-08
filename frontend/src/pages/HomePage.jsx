@@ -13,7 +13,7 @@ import ProblemSolutionFlow from '../components/features/ProblemSolutionFlow';
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#FFFDF7] to-[#fffdf6]" >
+    <div className="min-h-screen" >
       <Navbar />
       <HeroSection />
       <div id="how-it-works">

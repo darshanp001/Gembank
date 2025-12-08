@@ -166,7 +166,7 @@
 // export default ThreeStepVisual;
 
 import { UserPlus, Package, Rocket, CheckCircle, ArrowRight } from 'lucide-react';
-
+import Button from '../common/Button';
 const ThreeStepVisual = () => {
   const steps = [
     {
@@ -222,10 +222,10 @@ const ThreeStepVisual = () => {
             return (
               <div 
                 key={index}
-                className="group relative bg-white rounded-2xl p-6 lg:p-8 border-2 border-[#E8D7A8] hover:border-[#C9A73A] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="group relative bg-white rounded-2xl p-6 lg:p-8 border-2 border-[#1E4DFF] hover:border-[#123A9C] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 {/* Step Number Badge */}
-                <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-[#C9A73A] to-[#E3C35F] rounded-full flex items-center justify-center shadow-lg">
+                <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-[#0A1E5A] via-[#123A9C] to-[#1E4DFF] rounded-full flex items-center justify-center shadow-lg">
                   <span className="text-white font-bold text-lg">{index + 1}</span>
                 </div>
 
@@ -267,10 +267,15 @@ const ThreeStepVisual = () => {
 
         {/* CTA Button */}
         <div className="text-center mt-12">
-          <button className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#C9A73A] to-[#E3C35F] hover:from-[#B88F21] hover:to-[#C9A73A] text-white font-bold rounded-xl shadow-lg shadow-[#C9A73A]/25 hover:shadow-xl hover:shadow-[#C9A73A]/35 transition-all duration-300 hover:scale-105">
-            Start Your Journey
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+              <Button 
+                variant="primary" 
+                size="lg"
+                className="group bg-gradient-to-rtext-white font-bold shadow-lg shadow-[#1E4DFF]/25 hover:shadow-xl hover:shadow-[#1E4DFF]/35 transition-all duration-300 px-10 py-4 text-lg rounded-xl"
+              >
+                Start Your Journey
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+
         </div>
 
         {/* Bottom Stats */}

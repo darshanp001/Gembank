@@ -11,7 +11,8 @@ const LOISuccessPage = () => {
   const pdfUrl = queryParams.get('pdf');
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#FFFDF7] to-[#fffdf6] flex flex-col">
+    // <div className="min-h-screen bg-gradient-to-br from-[#FFFDF7] to-[#fffdf6] flex flex-col">
+        <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow flex items-center justify-center text-center py-20 px-4">
         <div className="max-w-2xl w-full">

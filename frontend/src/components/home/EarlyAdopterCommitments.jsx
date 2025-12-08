@@ -68,11 +68,11 @@ const QuoteCard = ({ quote, index }) => {
       ref={cardRef}
       className={`relative group bg-white rounded-2xl p-8 transition-all duration-700 ease-out
                  border border-gray-200/80 shadow-lg shadow-gray-200/50
-                 hover:!translate-y-[-8px] hover:border-amber-400/80 hover:shadow-2xl hover:shadow-amber-200/60
+                 hover:!translate-y-[-8px] hover:border-blue-500/80  hover:shadow-2xl hover:shadow-blue-200/60
                  ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
       style={{ transitionDelay: `${index * 150}ms` }} // Staggered animation delay
     >
-      <QuoteIcon className="absolute top-8 right-8 w-16 h-16 text-gray-100/80 transition-colors duration-300 group-hover:text-amber-100" />
+      <QuoteIcon className="absolute top-8 right-8 w-16 h-16 text-gray-100/80 transition-colors duration-300 group-hover:text-blue-100" />
       <div className="relative flex flex-col h-full z-10">
         <p className="text-gray-700 text-xl font-medium leading-relaxed flex-grow">
           “{quote.text}”

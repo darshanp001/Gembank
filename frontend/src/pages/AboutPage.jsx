@@ -60,7 +60,7 @@ const AboutPage = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-[#FFFDF7] to-[#fffdf6]">
+        <div className="min-h-screen">
             <Navbar />
 
             {/* Hero Section */}
@@ -82,8 +82,8 @@ const AboutPage = () => {
                     <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                         {whyItems.map((item, index) => (
                             <div key={index} className="text-center p-6">
-                                <div className="flex items-center justify-center h-16 w-16 rounded-2xl bg-gradient-to-br from-amber-100 to-amber-200/80 mx-auto shadow-sm">
-                                    <item.icon className="h-8 w-8 text-amber-700" strokeWidth={2.5} />
+                                <div className="flex items-center justify-center h-16 w-16 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200/80 mx-auto shadow-sm">
+                                    <item.icon className="h-8 w-8 text-blue-700" strokeWidth={2.5} />
                                 </div>
                                 <h3 className="mt-6 text-xl font-bold text-gembank-charcoal">{item.title}</h3>
                                 <p className="mt-2 text-gembank-gray-800">{item.description}</p>
@@ -99,7 +99,7 @@ const AboutPage = () => {
                     <h2 className="text-3xl font-bold text-center text-gembank-charcoal">Meet Our Team</h2>
                     <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
                         {founders.map((founder, index) => (
-                            <div key={index} className="bg-white/80 backdrop-blur-sm text-center p-8 rounded-2xl border border-amber-200/60 shadow-lg shadow-amber-100/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 hover:border-amber-400/80">
+                            <div key={index} className="bg-white/80 backdrop-blur-sm text-center p-8 rounded-2xl border hover:border-blue-500/80  shadow-lg shadow-amber-100/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 hover:border-amber-400/80">
                                 <img
                                     className="w-32 h-32 rounded-full mx-auto object-cover ring-4 ring-white/80 shadow-md"
                                     src={founder.imageUrl}
@@ -133,7 +133,7 @@ const AboutPage = () => {
                         <h2 className="text-3xl font-bold text-gembank-charcoal">Our Commitment to Authenticity</h2>
                         <p className="mt-4 text-lg text-gembank-gray-700">We are building a platform on the principles of trust, transparency, and a deep understanding of the jewellery trade.</p>
                     </div>
-                    <div className="mt-12 max-w-3xl mx-auto bg-white/80 backdrop-blur-sm border-2 border-amber-200/60 rounded-2xl p-8 lg:p-12 shadow-lg shadow-amber-100/50">
+                    <div className="mt-12 max-w-3xl mx-auto bg-white/80 backdrop-blur-sm border border-blue-400/80  rounded-2xl p-8 lg:p-12 shadow-lg shadow-amber-100/50">
                         <ul className="space-y-4">
                             {checklistItems.map((item, index) => (
                                 <li key={index} className="flex items-start">

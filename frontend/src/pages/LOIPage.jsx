@@ -5,11 +5,11 @@ import { CheckCircle, Sparkles } from 'lucide-react';  // ✅ Lucide icons
 
 const LOIPage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen ">
       <Navbar />
 
       {/* Hero Banner */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-white via-gembank-gold/5 to-gembank-gold/20 overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-white via-gembank-blue/5 to-gembank-blue/20 overflow-hidden">
         {/* Background Glows */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-gembank-gold/10 rounded-full blur-3xl opacity-70 animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gembank-purple/10 rounded-full blur-3xl opacity-50 animate-pulse [animation-delay:2s]"></div>

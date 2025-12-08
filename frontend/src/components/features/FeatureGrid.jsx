@@ -350,7 +350,7 @@ const FeaturesGrid = () => {
               onClick={() => setActiveCategory(category?.id)}
               className={`flex items-center space-x-2 px-4 py-3 rounded-md text-sm font-medium transition-all duration-300 ${
                 activeCategory === category?.id
-                  ? 'bg-gradient-to-r from-[#C9A73A] to-[#B88F21] text-white shadow-md shadow-amber-500/10'
+                  ? '  bg-gradient-to-br from-[#0A1E5A] via-[#123A9C] to-[#1E4DFF] text-white shadow-md shadow-amber-500/10'
                   : 'text-gray-700 hover:text-gray-900 hover:bg-amber-50/50'
               }`}
             >
@@ -363,7 +363,7 @@ const FeaturesGrid = () => {
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {features?.[activeCategory]?.map((feature, index) => (
-            <div key={index} className="bg-white rounded-lg p-8 shadow-sm border border-gray-200 hover:shadow-lg hover:border-amber-300/80 transition-all duration-300">
+            <div key={index} className="bg-white rounded-lg p-8 shadow-sm border border-gray-200 hover:shadow-lg hover:border-blue-500/80 transition-all duration-300">
               <div className="flex items-start justify-between mb-4">
                 <div className="w-12 h-12 bg-amber-100/60 rounded-lg flex items-center justify-center">
                   <Icon name={feature?.icon} size={24} className="text-amber-700" />
@@ -379,7 +379,7 @@ const FeaturesGrid = () => {
               <p className="text-gray-600 mb-6">{feature?.description}</p>
               
               {/* Testimonial */}
-              <div className="bg-gray-50/80 rounded-lg p-4 border-l-4 border-amber-500">
+              <div className="bg-gray-50/80 rounded-lg p-4 border-l-4 border-blue-500">
                 <p className="text-sm text-gray-700 italic">{feature?.testimonial}</p>
               </div>
             </div>
@@ -398,7 +398,17 @@ const FeaturesGrid = () => {
             {/* Replaced Button with styled <a> tag */}
             <a
               href="#"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-[#C9A73A] to-[#B88F21] shadow-lg shadow-amber-500/20 hover:from-[#B88F21] hover:to-[#C9A73A] transition-all duration-300 transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg font-semibold bg-gradient-to-br
+  from-[#0A1E5A]  
+  via-[#123A9C]   
+  to-[#1E4DFF]   
+  text-white
+  shadow-[0_4px_14px_rgba(18,58,156,0.35)]
+  hover:shadow-[0_6px_18px_rgba(18,58,156,0.45)]
+  hover:brightness-110
+  active:brightness-95
+  transform hover:-translate-y-0.5
+  ring-1 ring-inset ring-white/10"
             >
               Start Free Trial
               <Icon name="ArrowRight" size={18} />
@@ -406,7 +416,12 @@ const FeaturesGrid = () => {
             {/* Replaced Button with styled <a> tag */}
             <a
               href="#"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg font-semibold text-gray-700 bg-white border border-gray-300 hover:bg-gray-50/50 transition-all duration-300 transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg font-semibold bg-transparent
+    text-[#1E4DFF]
+    border border-[#1E4DFF]/40
+    hover:border-[#1E4DFF]
+    hover:text-[#2F63FF]
+  transition-all duration-300"
             >
               <Icon name="Calendar" size={18} />
               Book Demo Call

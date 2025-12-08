@@ -106,7 +106,7 @@ export const NeobankExplainer = () => {
               onClick={() => setActiveTab(tab.id)}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
                 activeTab === tab.id
-                  ? 'bg-gradient-to-r from-[#C9A73A] to-[#B88F21] text-white shadow-lg shadow-amber-500/20'
+                  ? 'bg-gradient-to-br from-[#0A1E5A] via-[#123A9C] to-[#1E4DFF]    text-white shadow-lg shadow-amber-500/20'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
