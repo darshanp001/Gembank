@@ -30,7 +30,7 @@
 //             backgroundSize: "40px 40px",
 //           }}
 //         />
-        
+
 //         {/* Soft Gradient Orbs */}
 //         <div className="absolute top-20 -left-32 w-96 h-96 bg-[#E8D7A8]/20 rounded-full blur-3xl"></div>
 //         <div className="absolute bottom-20 -right-32 w-[500px] h-[500px] bg-[#C9A73A]/10 rounded-full blur-3xl"></div>
@@ -39,10 +39,10 @@
 
 //       <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 py-16 lg:py-24 relative z-10">
 //         <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
-          
+
 //           {/* Left Column - Content */}
 //           <div className="space-y-10 text-center lg:text-left">
-            
+
 //             {/* Premium Badge */}
 //             <div className="inline-flex items-center gap-2.5 px-6 py-3 bg-white/80 backdrop-blur-sm border border-[#E8D7A8] rounded-full shadow-sm hover:shadow-md transition-all duration-300">
 //               <Sparkles className="w-4 h-4 text-[#C9A73A]" />
@@ -107,9 +107,9 @@
 //                   <div className="text-sm text-[#444444] font-medium">Pilot Partners</div>
 //                 </div>
 //               </div>
-              
+
 //               <div className="w-px h-14 bg-[#E8D7A8]"></div>
-              
+
 //               <div className="flex items-center gap-4">
 //                 <div className="p-3 bg-gradient-to-br from-[#E3F2FD] to-[#BBDEFB] rounded-xl shadow-sm">
 //                   <Lock className="w-6 h-6 text-[#2196F3]" />
@@ -119,9 +119,9 @@
 //                   <div className="text-sm text-[#444444] font-medium">Secure</div>
 //                 </div>
 //               </div>
-              
+
 //               <div className="w-px h-14 bg-[#E8D7A8]"></div>
-              
+
 //               <div className="flex items-center gap-4">
 //                 <div className="p-3 bg-gradient-to-br from-[#FFF9E6] to-[#FFEAA7] rounded-xl shadow-sm">
 //                   <Award className="w-6 h-6 text-[#C9A73A]" />
@@ -133,7 +133,7 @@
 //               </div>
 //             </div>
 
-        
+
 //             {/* Email Waitlist
 //             <div className="pt-6">
 //               <div className="flex items-center gap-3 p-2 bg-white rounded-2xl border-2 border-[#E8D7A8] shadow-md hover:shadow-lg hover:border-[#C9A73A] transition-all duration-300 max-w-lg mx-auto lg:mx-0">
@@ -153,7 +153,7 @@
 //                   Join Waitlist
 //                 </Button>
 //               </div>
-              
+
 //             </div> */}
 
 //             {/* Trust Badges */}
@@ -196,8 +196,8 @@
 //           <div className="w-1.5 h-2.5 bg-gradient-to-b from-[#C9A73A] to-[#E3C35F] rounded-full animate-scroll-down"></div>
 //         </div>
 //       </div>
- 
-  
+
+
 //       {/* Add CSS for animations */}
 //       <style jsx>{`
 //         @keyframes float {
@@ -236,7 +236,7 @@ import Button from "../common/Button";
 import heroMockup from "../../assets/images/unnamed.png";
 import { ArrowRight, CheckCircle, Lock, Award, TrendingUp, Sparkles } from "lucide-react";
 // import ProblemSolutionFlow from '../components/features/ProblemSolutionFlow';
-import  ProblemSolutionFlow  from "../features/ProblemSolutionFlow";
+import ProblemSolutionFlow from "../features/ProblemSolutionFlow";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -252,42 +252,34 @@ const HeroSection = () => {
 
   return (
     <section className="relative bg-transparent min-h-screen flex items-center overflow-hidden antialiased">
+    {/* <div className=" max-w-screen h-screen overflow-hidden"> */}
 
-               <div className=" max-w-screen h-screen overflow-hidden">
-
-  {/* Background Video */}
-  <video
-    src="/he.mp4"
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="absolute inset-0 w-full h-full object-cover"
+        {/* Background Video */}
+        {/* <video
+          src="/he.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        </div>  
-      {/* Subtle Background Elements */}
-      {/* <div className="absolute inset-0 overflow-hidden">
-        {/* Light Grid Pattern */}
-        {/* <div
-          className="absolute inset-0 opacity-[0.02]"
-          style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(201, 167, 58, 0.3) 1px, transparent 0)`,
-            backgroundSize: "40px 40px",
-          }} 
-        /> */}
-        
-        {/* Soft Gradient Orbs */}
-        {/* <div className="absolute top-20 -left-32 w-96 h-96 bg-[#E8D7A8]/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 -right-32 w-[500px] h-[500px] bg-[#C9A73A]/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-[#EACB5E]/15 rounded-full blur-2xl"></div> */}
-      {/* </div> */}
+      Bottom Left Video */}
+      <div className="absolute bottom-0 right-10 w-[700px] h-[500px] overflow-hidden z-0">
+        <video src="/he.mp4" 
+            autoPlay 
+            muted 
+            loop 
+            playsInline 
+            className="w-full h-full object-cover" 
+            />
+      </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 py-16 lg:py-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
-          
+
           {/* Left Column - Content */}
           <div className="space-y-10 text-center lg:text-left">
-            
+
             {/* Premium Badge */}
             <div className="inline-flex items-center gap-2.5 px-6 py-3 bg-white/80 backdrop-blur-sm border border-[#E8D7A8] rounded-full shadow-sm hover:shadow-md transition-all duration-300">
               <Sparkles className="w-4 h-4 text-[#C9A73A]" />
@@ -318,10 +310,11 @@ const HeroSection = () => {
                 Launching Q1 2026
               </span>
             </p>
-                {/* CTA Buttons */}
-            <div className="flex flex-col justify-center sm:flex-row gap-4 pt-4 ">
-              <Button 
-                variant="primary" 
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col  sm:flex-row gap-4 pt-4 ">
+              <Button
+                variant="primary"
                 size="lg"
                 onClick={handleEarlyAccess}
                 className="group bg-gradient-to-rtext-white font-bold shadow-lg shadow-[#1E4DFF]/25 hover:shadow-xl hover:shadow-[#1E4DFF]/35 transition-all duration-300 px-10 py-4 text-lg rounded-xl"
@@ -352,9 +345,9 @@ const HeroSection = () => {
                   <div className="text-sm text-[#444444] font-medium">Pilot Partners</div>
                 </div>
               </div>
-              
+
               <div className="w-px h-14 bg-[#E8D7A8]"></div>
-              
+
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-gradient-to-br from-[#E3F2FD] to-[#BBDEFB] rounded-xl shadow-sm">
                   <Lock className="w-6 h-6 text-[#2196F3]" />
@@ -364,9 +357,9 @@ const HeroSection = () => {
                   <div className="text-sm text-[#444444] font-medium">Secure</div>
                 </div>
               </div>
-              
+
               <div className="w-px h-14 bg-[#E8D7A8]"></div>
-              
+
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-gradient-to-br from-[#FFF9E6] to-[#FFEAA7] rounded-xl shadow-sm">
                   <Award className="w-6 h-6 text-[#C9A73A]" />
@@ -378,7 +371,7 @@ const HeroSection = () => {
               </div>
             </div>
 
-        
+
             {/* Email Waitlist
             <div className="pt-6">
               <div className="flex items-center gap-3 p-2 bg-white rounded-2xl border-2 border-[#E8D7A8] shadow-md hover:shadow-lg hover:border-[#C9A73A] transition-all duration-300 max-w-lg mx-auto lg:mx-0">
@@ -421,9 +414,9 @@ const HeroSection = () => {
           {/* Right Column - App Mockup */}
           {/* <div className="relative flex justify-center items-center lg:justify-end">
             <div className="relative group"> */}
-              {/* Soft Glow Behind Image */}
-              {/* <div className="absolute inset-0 bg-gradient-to-r from-[#C9A73A]/10 to-[#E3C35F]/10 blur-3xl rounded-3xl transform group-hover:scale-105 transition-transform duration-700"></div> */}
-              {/* hero mockup Image
+          {/* Soft Glow Behind Image */}
+          {/* <div className="absolute inset-0 bg-gradient-to-r from-[#C9A73A]/10 to-[#E3C35F]/10 blur-3xl rounded-3xl transform group-hover:scale-105 transition-transform duration-700"></div> */}
+          {/* hero mockup Image
               <img
                 src={heroMockup}
                 alt="GEMBank App Mockup"
@@ -441,8 +434,8 @@ const HeroSection = () => {
           <div className="w-1.5 h-2.5 bg-gradient-to-b from-[#C9A73A] to-[#E3C35F] rounded-full animate-scroll-down"></div>
         </div>
       </div> */}
- 
-  
+
+
       {/* Add CSS for animations */}
       <style jsx>{`
         @keyframes float {

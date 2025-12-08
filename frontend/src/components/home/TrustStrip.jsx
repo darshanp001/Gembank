@@ -11,7 +11,7 @@ export const TrustStrip = () => {
   return (
     <section className="relative py-12 bg-transparent border-y border-gembank-gray-200 overflow-hidden">
       {/* Soft golden overlay glow */}
-      <div className="absolute inset-0 bg-gradient-to-r from-gembank-gold/5 via-transparent to-gembank-gold/5 blur-2xl pointer-events-none" />
+      <div className="absolute inset-0 bg-[#edeaff] via-transparent to-gembank-gold/5 blur-2xl pointer-events-none" />
 
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title */}
