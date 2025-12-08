@@ -262,9 +262,8 @@ const HeroSection = () => {
           loop
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-        />
       Bottom Left Video */}
-      <div className="absolute bottom-0 right-10 w-[700px] h-[500px] overflow-hidden z-0">
+      <div className="absolute bottom-0 -right-1/4 w-[500px] h-[300px] overflow-hidden z-0 lg:right-10 lg:w-[700px] lg:h-[500px]">
         <video src="/he.mp4" 
             autoPlay 
             muted 

@@ -68,6 +68,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-[#1A1A1A]">+91 95120 30107</p>
+                    <p className="font-semibold text-[#1A1A1A]">+91 70808 07671</p>
                     {/* <p className="text-sm text-[#444444]">Mon-Fri, 9am-6pm IST</p> */}
                   </div>
                 </div>
@@ -76,7 +77,7 @@ const ContactPage = () => {
                     <Mail className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <p className="font-semibold text-[#1A1A1A]">gembankteam@gmail.com</p>
+                    <p className="font-semibold text-[#1A1A1A]">sinha.amrit.2004@gmail.com</p>
                     <p className="text-sm text-[#444444]">General inquiries</p>
                   </div>
                 </div>
