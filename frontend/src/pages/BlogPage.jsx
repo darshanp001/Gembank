@@ -65,7 +65,7 @@ const BlogPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#FFFDF7] to-[#fffdf6]">
+    <div className="min-h-screen">
       <Navbar />
 
       <main className="pt-24 pb-20">
@@ -109,7 +109,7 @@ const BlogPage = () => {
             // Blog List View
             <div className="grid lg:grid-cols-3 gap-8">
               {blogData.map((post) => (
-                <div key={post.slug} className="bg-white/80 backdrop-blur-sm border border-amber-200/60 rounded-2xl overflow-hidden shadow-lg shadow-amber-100/50 flex flex-col group">
+                <div key={post.slug} className="bg-white/80 backdrop-blur-sm border border-blue-200/60 rounded-2xl overflow-hidden shadow-lg  flex flex-col group">
                   <div className="h-48 overflow-hidden">
                     <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   </div>
@@ -126,7 +126,7 @@ const BlogPage = () => {
                       </div>
                     </div>
                     <p className="text-sm text-[#444444] mb-6">{post.excerpt}</p>
-                    <button onClick={() => handleReadMore(post)} className="mt-auto flex items-center gap-2 text-sm font-semibold text-[#B68E2B] hover:text-[#1A1A1A] transition-colors">
+                    <button onClick={() => handleReadMore(post)} className="mt-auto flex items-center gap-2 text-sm font-semibold text-[#123A9C] hover:text-[#1A1A1A] transition-colors">
                       Read More
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </button>

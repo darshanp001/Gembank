@@ -37,7 +37,7 @@ const FeaturesPage = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#FFFDF7] to-[#fffdf6]">
+    <div className="min-h-screen">
       <Navbar />
       
       {/* Hero Section */}

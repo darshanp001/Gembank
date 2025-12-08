@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Mail, Phone } from 'lucide-react';
-
+import Button from '../common/Button';
 const FAQAccordion = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
@@ -102,15 +102,15 @@ const FAQAccordion = () => {
                     key={qIndex}
                     className={`border-2 rounded-lg overflow-hidden transition-all duration-300 ${
                       isOpen
-                        ? 'border-gembank-gold shadow-gold'
-                        : 'border-gembank-gray-300 hover:border-gembank-gray-400'
+                        ? 'border-[#123A9C] shadow-[#123A9C]'
+                        : '#123A9C hover:border-gembank-gray-400'
                     }`}
                   >
                     <button
                       onClick={() => toggleAccordion(catIndex, qIndex)}
                       className="w-full px-6 py-4 flex items-center justify-between text-left bg-white hover:bg-gembank-gray-50 transition-colors"
                     >
-                      <span className={`font-semibold pr-4 ${isOpen ? 'text-gembank-gold' : 'text-gembank-charcoal'}`}>
+                      <span className={`font-semibold pr-4 ${isOpen ? 'text-[#123A9C]' : 'text-gembank-charcoal'}`}>
                         {faq.q}
                       </span>
                       <svg
@@ -153,14 +153,24 @@ const FAQAccordion = () => {
           Our team is here to help. Get in touch and we'll respond within 24 hours.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="flex items-center justify-center gap-2 px-6 py-3 bg-gembank-gold hover:bg-gembank-gold-dark text-gembank-charcoal font-semibold rounded-lg transition-all duration-300 shadow-gold">
+                        <Button 
+                variant="primary" 
+                size="lg"
+                className="group bg-gradient-to-rtext-white font-bold shadow-lg shadow-[#1E4DFF]/25 hover:shadow-xl hover:shadow-[#1E4DFF]/35 transition-all duration-300 px-10 py-4 text-lg rounded-xl gap-2"
+              >
             <Mail className="w-4 h-4" />
             Email Support
-          </button>
-          <button className="flex items-center justify-center gap-2 px-6 py-3 bg-transparent border-2 border-gembank-gold text-gembank-gold hover:bg-gembank-gold hover:text-gembank-charcoal font-semibold rounded-lg transition-all duration-300">
-            <Phone className="w-4 h-4" />
+              </Button>
+
+              <Button
+                variant="secondary"
+                size="lg"
+                className="border-2 border-[#1E4DFF]/30 text-[#444444]  hover:border-[#1E4DFF] font-bold px-10 py-4 text-lg rounded-xl shadow-sm hover:shadow-md transition-all duration-300 gap-2"
+              >
+                           <Phone className="w-4 h-4" />
             Schedule a Call
-          </button>
+              </Button>
+
         </div>
       </div>
 

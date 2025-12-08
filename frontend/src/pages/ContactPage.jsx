@@ -34,7 +34,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#FFFDF7] to-[#fffdf6]">
+    <div className="min-h-screen">
       <Navbar />
 
       <main className="pt-24 pb-20">
@@ -53,7 +53,7 @@ const ContactPage = () => {
           <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-start">
 
             {/* Left Column: Contact Information */}
-            <div className="bg-white/80 backdrop-blur-sm border border-amber-200/60 rounded-2xl p-8 lg:p-12 space-y-8 shadow-lg shadow-amber-100/50">
+            <div className="bg-white/80 backdrop-blur-sm border border-blue-200/60 rounded-2xl p-8 lg:p-12 space-y-8 shadow-lg shadow-blue-100/50">
               <div>
                 <h2 className="text-2xl font-bold text-[#1A1A1A] mb-4">Contact Information</h2>
                 <p className="text-[#444444]">
@@ -63,8 +63,8 @@ const ContactPage = () => {
 
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-amber-100/70 rounded-lg flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-amber-600" />
+                  <div className="w-12 h-12 bg-blue-100/70 rounded-lg flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
                     <p className="font-semibold text-[#1A1A1A]">+91 95120 30107</p>
@@ -72,8 +72,8 @@ const ContactPage = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-amber-100/70 rounded-lg flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-amber-600" />
+                  <div className="w-12 h-12 bg-blue-100/70 rounded-lg flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
                     <p className="font-semibold text-[#1A1A1A]">gembankteam@gmail.com</p>
@@ -93,7 +93,7 @@ const ContactPage = () => {
             </div>
 
             {/* Right Column: Contact Form */}
-            <div className="bg-white/80 backdrop-blur-sm border border-amber-200/60 rounded-2xl p-8 lg:p-12 shadow-lg shadow-amber-100/50">
+            <div className="bg-white/80 backdrop-blur-sm border border-blue-200/60 rounded-2xl p-8 lg:p-12 shadow-lg shadow-amber-100/50">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-[#1A1A1A] mb-2">Full Name</label>

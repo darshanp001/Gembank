@@ -287,7 +287,7 @@ const DesktopNav = ({ navLinks, isActive }) => {
           onClick={(e) => handleNavLinkClick(e, link.href)}
           className={`text-sm font-medium transition-colors duration-200 ${
             isActive(link.href)
-              ? 'text-gembank-gold'
+              ? 'text-[#123A9C]'
               : 'text-charcoal-gray hover:text-[#123A9C]'
           }`}
         >
